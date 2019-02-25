@@ -1,0 +1,69 @@
+###TASKFILE
+0:3?3000000000000000000000000000000S
+Preamble :
+Postamble:
+###FORMFILE
+DATA     02 0 01000
+FDOSYA   B 01 03                                                    
+FBARKOD  B 01 20                                                    
+###VARIABLE
+006
+C 32 0                                  
+C 10 0                                  
+N 32 0                                  
+N 32 0                                  
+N 32 0                                  
+C 10 0                                  
+###CONSTANT
+011
+"Oda No:         "
+1
+10
+400
+""
+"BARKOD :        "
+4
+"Kaydedildi"
+4300
+3
+"1"
+###PCDFILE
+00037 SAYIM    1 P 2.BILGI         
+01 MAC P 000 X     X      
+01 CLS M 033 X     X     
+02 MSG M 013 C 000 D 001 
+03 INP M 001 V 005 X     
+04 LEN M 007 V 005 V 002 
+05 CMP M 008 V 002 C 001 
+06 JMP M 005 D 003 D 004 
+07 CMP M 008 V 002 C 002 
+08 JMP M 005 D 002 D 002 
+09 END M 030 D 004 D 003 
+10 BEP M 002 D 200 C 003 
+11 JMP M 005 D 004 D 138 
+02 LST P 001 X     X      
+03 MAC P 000 X     X      
+01 CLS M 033 X     X     
+02 MSG M 013 C 000 D 001 
+03 MSG M 013 V 005 D 009 
+04 MOV M 009 C 004 V 000 
+05 MSG M 013 C 005 D 017 
+06 INP M 001 V 000 X     
+07 LEN M 007 V 000 V 002 
+08 CMP M 008 V 002 C 001 
+09 JMP M 005 D 003 D 010 
+10 MOV M 009 V 005 F 001 
+11 MOV M 009 V 000 F 002 
+12 NRC M 020 X     X     
+13 CLL M 032 C 006 X     
+14 MSG M 013 C 007 D 049 
+15 BEP M 002 D 050 C 008 
+16 CLL M 032 C 009 X     
+17 CLL M 032 C 006 X     
+18 JMP M 005 D 004 D 142 
+19 BEP M 002 D 100 D 100 
+20 JMP M 005 D 004 D 144 
+21 MOV M 009 C 010 V 001 
+22 JMP M 005 D 004 D 140 
+04 LOP P 002 X     X      
+###ENDTASK

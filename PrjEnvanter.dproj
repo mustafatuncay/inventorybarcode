@@ -1,0 +1,213 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{79F13B6F-D4D2-45B6-B88F-D9A3D8A1A3B1}</ProjectGuid>
+			<MainSource>PrjEnvanter.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UsePackage>vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;IntrawebDB_50_70;Intraweb_50_70;Rave50CLX;Rave50VCL;dclOfficeXP;dxNavBarD7;cxLibraryVCLD7;dxPSCoreD7;dxComnD7;dxPSLnksD7;dxPSTeeChartD7;dxPSDBTeeChartD7;dxPScxCommonD7;cxEditorsVCLD7;cxDataD7;dxPScxExtCommonD7;cxExtEditorsVCLD7;dxThemeD7;dxPScxGridLnkD7;cxGridVCLD7;cxPageControlVCLD7;dxPScxPCProdD7;skinpackD7;DclRx7;RxCtl7;dclrxdb7;RxDB7;RxBde7;TMSD7;TMSDED7;tmsxlsd7;teeqr;qrpt</DCC_UsePackage>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_DependencyCheckOutputName>PrjEnvanter.exe</DCC_DependencyCheckOutputName>
+			<DCC_K>false</DCC_K>
+			<DCC_N>true</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+			<DCC_E>false</DCC_E>
+			<DCC_F>false</DCC_F>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="PrjEnvanter.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="UntMenu.pas">
+				<Form>FrmMenu</Form>
+			</DCCReference>
+			<DCCReference Include="UntZimmet.pas">
+				<Form>FrmZimmet</Form>
+			</DCCReference>
+			<DCCReference Include="genel\UntDm.pas">
+				<Form>Dm</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="genel\UntGlobal.pas"/>
+			<DCCReference Include="DlgForms\UntUyari.pas">
+				<Form>FrmUyari</Form>
+			</DCCReference>
+			<DCCReference Include="DlgForms\UntOnay.pas">
+				<Form>FrmOnay</Form>
+			</DCCReference>
+			<DCCReference Include="UntRapor.pas">
+				<Form>FrmRapor</Form>
+			</DCCReference>
+			<DCCReference Include="UntSabitTanimlar.pas">
+				<Form>FrmSabitTanimlar</Form>
+			</DCCReference>
+			<DCCReference Include="UntPersonel.pas">
+				<Form>FrmPersonel</Form>
+			</DCCReference>
+			<DCCReference Include="UntMalzemeKodlama.pas">
+				<Form>FrmMalzemeKodlama</Form>
+			</DCCReference>
+			<DCCReference Include="DlgForms\UntDlgPersonel.pas">
+				<Form>FrmDlgPersonel</Form>
+			</DCCReference>
+			<DCCReference Include="UntRepAlk1Arka.pas">
+				<Form>RepAlk1Arka</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepAlk4.pas">
+				<Form>RepAlk4</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntDemirbasKayit.pas">
+				<Form>FrmDemirbasKayit</Form>
+			</DCCReference>
+			<DCCReference Include="genel\UntProjectGlobal.pas"/>
+			<DCCReference Include="DlgForms\UntDlgDemirbas.pas">
+				<Form>FrmDlgDemirbas</Form>
+			</DCCReference>
+			<DCCReference Include="UntBarkod.pas">
+				<Form>FrmBarkod</Form>
+			</DCCReference>
+			<DCCReference Include="UntAlk4.pas">
+				<Form>FrmAlk4</Form>
+			</DCCReference>
+			<DCCReference Include="UntSayimKontrol.pas">
+				<Form>FrmSayimKontrol</Form>
+			</DCCReference>
+			<DCCReference Include="UntAlk1.pas">
+				<Form>FrmAlk1</Form>
+			</DCCReference>
+			<DCCReference Include="UntBarkodVeriAktar.pas">
+				<Form>FrmBarkodVeriAktar</Form>
+			</DCCReference>
+			<DCCReference Include="UntBarkodVeriAyar.pas">
+				<Form>FrmBarkodVeriAyar</Form>
+			</DCCReference>
+			<DCCReference Include="UntRepTutanak.pas">
+				<Form>RepTutanak</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepPersonel.pas">
+				<Form>RepPersonel</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepZimmet.pas">
+				<Form>RepZimmet</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepMf7.pas">
+				<Form>RepMf7</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepBos.pas">
+				<Form>RepBos</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepAlk1.pas">
+				<Form>RepAlk1</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntGiris.pas">
+				<Form>FrmGiris</Form>
+			</DCCReference>
+			<DCCReference Include="UntYonetim.pas">
+				<Form>FrmYonetim</Form>
+			</DCCReference>
+			<DCCReference Include="UntRepDemirbasGunlugu.pas">
+				<Form>RepDemirbasGunlugu</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepRapor2.pas">
+				<Form>RepRapor2</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UntRepRapor3.pas">
+				<Form>RepRapor3</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">PrjEnvanter.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1055</VersionInfo>
+						<VersionInfo Name="CodePage">1254</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

@@ -1,0 +1,12 @@
+Mustafa Bey,
+
+ 
+
+El Terminali ile ilgili program ektedir.
+
+El terminaline yüklenecek olan program TSL uzantýlý olanýdýr.
+
+Yükleme iþlemini Bkset adlý programda yükle düðmesinden TSL uzantýlý dosyayý seçerek yapabilirsiniz.
+
+Ýyi Çalýþmalar
+Ali DÝRÝK

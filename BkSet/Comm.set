@@ -1,0 +1,10 @@
+Com Port=COM200
+Baud Rate=9600
+Parity=None
+Data Bit=8
+Stop Bit=1
+Form No=1
+Dosya Tipi=XML
+Alan Ayýracý=;
+Kayýt Ayýracý=CR/LF
+Dosya Adý=C:\Documents and Settings\ALI\Desktop\data.txt
